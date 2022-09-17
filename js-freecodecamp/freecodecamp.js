@@ -157,42 +157,147 @@
 // console.log(name.split(""));
 
 // Setup
-const contacts = [
-  {
-    firstName: "Akira",
-    lastName: "Laine",
-    number: "0543236543",
-    likes: ["Pizza", "Coding", "Brownie Points"],
-  },
-  {
-    firstName: "Harry",
-    lastName: "Potter",
-    number: "0994372684",
-    likes: ["Hogwarts", "Magic", "Hagrid"],
-  },
-  {
-    firstName: "Sherlock",
-    lastName: "Holmes",
-    number: "0487345643",
-    likes: ["Intriguing Cases", "Violin"],
-  },
-  {
-    firstName: "Kristian",
-    lastName: "Vos",
-    number: "unknown",
-    likes: ["JavaScript", "Gaming", "Foxes"],
-  },
-];
+// const contacts = [
+//   {
+//     firstName: "Akira",
+//     lastName: "Laine",
+//     number: "0543236543",
+//     likes: ["Pizza", "Coding", "Brownie Points"],
+//   },
+//   {
+//     firstName: "Harry",
+//     lastName: "Potter",
+//     number: "0994372684",
+//     likes: ["Hogwarts", "Magic", "Hagrid"],
+//   },
+//   {
+//     firstName: "Sherlock",
+//     lastName: "Holmes",
+//     number: "0487345643",
+//     likes: ["Intriguing Cases", "Violin"],
+//   },
+//   {
+//     firstName: "Kristian",
+//     lastName: "Vos",
+//     number: "unknown",
+//     likes: ["JavaScript", "Gaming", "Foxes"],
+//   },
+// ];
 
-function lookUpProfile(name, prop) {
-  // Only change code below this line
-  contacts.forEach((contact) => {
-    if (contact.firstName === name && contact.likes.includes(prop)) {
-      return contact.likes;
+// function lookUpProfile(name, prop) {
+//   // Only change code below this line
+//   contacts.forEach((contact) => {
+//     if (contact.firstName === name && contact.likes.includes(prop)) {
+//       return contact.likes;
+//     }
+//   });
+
+//   // Only change code above this line
+// }
+
+// lookUpProfile("Akira", "likes");
+
+// function zeroArray(m, n) {
+//   // Створіть 2-D масив із m-рядків m та n-стовпчиків нулів
+//   let newArray = [];
+
+//   for (let i = 0; i < m; i++) {
+//     let row = [];
+//     // Додайте m-ий рядок до newArray
+//     row[i];
+//     console.log(row);
+//     // // console.log(row);
+//     for (let j = 0; j < n; j++) {
+//       // Додає n нулів до поточного рядка, щоб створити стовпчики
+//       row.push(0);
+//     }
+//     // Штовхає поточний рядок, який тепер містить n нулів, до масиву
+//     newArray.push(row);
+//   }
+//   return newArray;
+// }
+
+// let matrix = zeroArray(3, 2);
+// console.log(matrix);
+
+// function filteredArray(arr, elem) {
+//   let newArr = [];
+//   // Змініть код лише під цим рядком
+//   for (i = 0; i < arr.length; i += 1) {
+//     if (arr[i].indexOf(elem) === -1) {
+//       newArr.push(arr[i]);
+//     }
+//   }
+//   // Змініть код лише над цим рядком
+//   return newArr;
+// }
+
+// console.log(
+//   filteredArray(
+//     [
+//       [3, 2, 3],
+//       [1, 6, 3],
+//       [3, 13, 26],
+//       [19, 3, 9],
+//     ],
+//     3
+//   )
+// );
+// console.log(
+//   filteredArray(
+//     [
+//       [10, 8, 3],
+//       [14, 6, 23],
+//       [3, 18, 6],
+//     ],
+//     18
+//   )
+// );
+
+// console.log(
+//   filteredArray(
+//     [
+//       ["trumpets", 2],
+//       ["flutes", 4],
+//       ["saxophones", 2],
+//     ],
+//     2
+//   )
+// );
+
+const users = {
+  Alan: {
+    online: false,
+  },
+  Jeff: {
+    online: true,
+  },
+  Sarah: {
+    online: false,
+  },
+};
+
+function countOnline(usersObj) {
+  // Змініть код лише під цим рядком
+  let usersOnLineQuantity = 0;
+  for (let user in usersObj) {
+    if (usersObj[user].online === "true") {
+      console.log(user);
+      usersOnLineQuantity += 1;
+      return usersOnLineQuantity;
     }
-  });
-
-  // Only change code above this line
+  }
+  // Змініть код лише над цим рядком
 }
 
-lookUpProfile("Akira", "likes");
+console.log(countOnline(users));
+
+// let result = 0;
+//   for (let user in usersObj) {
+//     if (usersObj[user].online === true) {
+//       result++;
+//     }
+//   }
+//   return result;
+//   // Only change code above this line
+// }
